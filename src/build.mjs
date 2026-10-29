@@ -714,7 +714,7 @@ function galleryPage() {
 /* ---------- Blog ---------- */
 function blogPage() {
   const fmt = (d) => new Date(d + 'T00:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
-  const body = `${opener({ field: 'sage', title: ['Notes for', 'future pilots'], lead: 'Guides and honest advice, from choosing a course to landing the career.' })}
+  const body = `${opener({ field: 'sage', title: ['Notes for', 'future pilots'], lead: 'Guides and honest advice, from choosing a course to landing the career.', pic: 'g-04', alt: 'Pilot with a headset in the cockpit' })}
 
     <section class="posts f-paper" data-chapter aria-labelledby="posts-title">
       ${heading('h2', 'head', ['Latest'], 'id="posts-title"')}
@@ -734,10 +734,10 @@ function contactPage() {
     <section class="contact f-paper" id="enquire" data-chapter>
       <div class="contact__ways">
         ${heading('h2', 'head', ['Reach us'])}
-        <a class="way" href="${site.phoneHref}" data-rise><small>Call ${site.phoneName}</small><strong>${site.phone}</strong></a>
-        <a class="way" href="mailto:${site.email}" data-rise style="--d:60ms"><small>Email</small><strong>${site.email}</strong></a>
-        <a class="way" href="https://wa.me/${site.whatsapp}" target="_blank" rel="noopener" data-rise style="--d:120ms"><small>WhatsApp</small><strong>Message us directly</strong></a>
-        <a class="way" href="${mapsUrl}" target="_blank" rel="noopener" data-rise style="--d:180ms"><small>Visit</small><strong>${site.address}</strong></a>
+        <a class="way" href="${site.phoneHref}" data-rise><strong>${site.phone}</strong><small>Call ${site.phoneName}</small></a>
+        <a class="way way--long" href="mailto:${site.email}" data-rise style="--d:60ms"><strong>${site.email}</strong><small>Email</small></a>
+        <a class="way" href="https://wa.me/${site.whatsapp}" target="_blank" rel="noopener" data-rise style="--d:120ms"><strong>Message us directly</strong><small>WhatsApp</small></a>
+        <a class="way way--long" href="${mapsUrl}" target="_blank" rel="noopener" data-rise style="--d:180ms"><strong>${site.address}</strong><small>Visit</small></a>
       </div>
       <form class="form" data-enquiry novalidate>
         ${heading('h2', 'head', ['Send a', 'message'])}
@@ -756,6 +756,18 @@ function contactPage() {
         </div>
         <p class="form-status" role="status" aria-live="polite" data-status></p>
       </form>
+    </section>
+
+    <section class="visit f-sand" data-chapter aria-labelledby="visit-title">
+      <div class="visit__head">
+        ${heading('h2', 'head', ['Visit the', 'academy'], 'id="visit-title"')}
+        <p class="lead" data-rise>Wing A, 2nd Floor, Best Building, Andheri West. Come for a free counselling session or a demo class.</p>
+      </div>
+      <div class="visit__pics">
+        <figure data-shutter>${img('g-09', 'Briefing room at the academy')}<figcaption>Briefing room</figcaption></figure>
+        <figure data-shutter>${img('g-10', 'Classroom at the academy')}<figcaption>Classroom</figcaption></figure>
+        <figure data-shutter>${img('g-11', 'Study space at the academy')}<figcaption>Study space</figcaption></figure>
+      </div>
     </section>
 
     <section class="map" data-chapter aria-label="Map">
