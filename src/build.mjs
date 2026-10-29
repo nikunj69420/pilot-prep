@@ -162,7 +162,7 @@ function header(active) {
 }
 
 // The closing chapter on every page: a strip of photographs and a three-cell enquiry bar.
-function strip({ title = ['Talk to a', 'counsellor'], text = 'Counselling is free, and honest. Leave your name and number and your message opens in WhatsApp, ready to send to our team.' } = {}) {
+function strip({ title = ['Talk to a', 'counsellor'], text = 'Free, honest counselling. Leave your name and number, and your message opens in WhatsApp ready to send.' } = {}) {
   const pics = ['g-01', 'g-09', 'g-16', 'g-05', 'g-10', 'g-17', 'g-02', 'g-14', 'g-13', 'g-07', 'g-18', 'g-11', 'g-20', 'g-06'];
   const set = pics.map((p) => img(p, '')).join('');
   return `
@@ -462,7 +462,7 @@ function becomePilot() {
     ['Your file number', 'A permanent, unique number printed on your Class 2 assessment. Every document you send to the DGCA is filed against it for the rest of your career.', 'dgca-process', 'DGCA paperwork for a pilot licence'],
   ];
   const body = `${opener({ field: 'sage', title: ['Become', 'a pilot'], lead: 'Commercial airliner or private jet, the road to the cockpit takes dedication, training and the right guidance. Here is the route.', pic: 'crew-smiling', alt: 'Smiling pilot with cabin crew', display: true })}
-${stepsSection({ field: 'paper', text: 'From foundational education and medical checks to flight training and licensing, each step shapes you into a skilled, responsible pilot.' })}
+${stepsSection({ field: 'paper', text: 'From medical checks to your licence, each step shapes a skilled, responsible pilot.' })}
 
     <section class="board f-paper" data-chapter aria-labelledby="req-title">
       <div class="board__tile board__tile--head f-olive" style="grid-column:1/7;grid-row:span 2">
@@ -489,7 +489,7 @@ ${stepsSection({ field: 'paper', text: 'From foundational education and medical 
         </div>`).join('\n        ')}
       </div>
     </section>`;
-  page({ file: 'become-a-pilot.html', title: 'How to Become a Pilot in India | Pilot Preparation Academy', description: 'The step-by-step roadmap to becoming a commercial pilot in India: eligibility, Class 2 and Class 1 medicals, computer number, DGCA ground classes and flight training.', body, closer: { title: ['Not sure where', 'to start?'], text: 'Tell us where you are today, at school, in college or changing careers, and we will map your route to the cockpit. Free.' } });
+  page({ file: 'become-a-pilot.html', title: 'How to Become a Pilot in India | Pilot Preparation Academy', description: 'The step-by-step roadmap to becoming a commercial pilot in India: eligibility, Class 2 and Class 1 medicals, computer number, DGCA ground classes and flight training.', body, closer: { title: ['Not sure where', 'to start?'], text: 'At school, in college or changing careers? We will map your route to the cockpit, free.' } });
 }
 
 /* ---------- DGCA ground classes ---------- */
@@ -520,7 +520,7 @@ function dgca() {
     <section class="duo duo--flip f-paper" data-chapter aria-labelledby="cn-title">
       <figure class="duo__pic" data-shutter>${img('computer-number', 'Trainee pilot at the controls of a simulator')}</figure>
       <div class="duo__text">
-        ${heading('h2', 'head', ['Your computer', 'number'], 'id="cn-title"')}
+        ${heading('h2', 'head', ['Computer', 'number'], 'id="cn-title"')}
         <p data-rise>A unique ID issued by the DGCA, and mandatory before you can apply for any pilot licensing exam in India. Our team takes you through the whole application, without the usual confusion or delays.</p>
         <ol class="olist" data-rise style="--d:80ms">
           <li><strong>Document check</strong><span>We verify every certificate before anything is filed.</span></li>
@@ -535,7 +535,7 @@ function dgca() {
       <span class="next__name display" data-lines>${lines(['See the', 'courses'])}</span>
       <span class="next__go">${ICONS.wideArrow}</span>
     </a>`;
-  page({ file: 'dgca-ground-classes.html', title: 'DGCA Ground Classes in Mumbai | Pilot Preparation Academy', description: 'DGCA ground classes for Air Navigation, Air Regulations, Meteorology, RTR and Technical General: live and recorded, in Hindi and English, with books, question bank and mock tests.', body, closer: { title: ['Book a free', 'demo class'], text: 'See how we teach Navigation, Regulations or Meteorology before you enrol. No pressure, no hype.' } });
+  page({ file: 'dgca-ground-classes.html', title: 'DGCA Ground Classes in Mumbai | Pilot Preparation Academy', description: 'DGCA ground classes for Air Navigation, Air Regulations, Meteorology, RTR and Technical General: live and recorded, in Hindi and English, with books, question bank and mock tests.', body, closer: { title: ['Book a free', 'demo class'], text: 'See how we teach Nav, Regs or Met before you enrol. No pressure, no hype.' } });
 }
 
 /* ---------- Courses ---------- */
@@ -590,7 +590,7 @@ function servicesPage() {
         </div>
       </div>
     </section>`;
-  page({ file: 'services.html', title: 'Services: Counselling, Ground Classes, CPP and Type Rating | Pilot Preparation Academy', description: 'Free aviation counselling, DGCA ground classes, computer number, verified flight schools in 8 countries, cadet pilot program assistance, type rating and airline preparation.', body, closer: { title: ['Try the', 'simulator'], text: 'Book a counselling call and ask for a Microsoft Flight Simulator session, to see how theory turns into feel.' } });
+  page({ file: 'services.html', title: 'Services: Counselling, Ground Classes, CPP and Type Rating | Pilot Preparation Academy', description: 'Free aviation counselling, DGCA ground classes, computer number, verified flight schools in 8 countries, cadet pilot program assistance, type rating and airline preparation.', body, closer: { title: ['Try the', 'simulator'], text: 'Ask for a Microsoft Flight Simulator session and see how theory turns into feel.' } });
 }
 
 /* ---------- Flight training hub ---------- */

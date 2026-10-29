@@ -147,7 +147,7 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
   padding-inline: var(--m);
   background: var(--h-bg, var(--paper));
   color: var(--h-fg, var(--ink));
-  transition: background-color var(--t-ui) ease, color var(--t-ui) ease, transform 500ms var(--ease-expo);
+  transition: background-color 200ms ease, color 200ms ease, transform 500ms var(--ease-expo);
 }
 .header.is-hidden { transform: translateY(-100%); }
 .header[data-flame] .btn { --b-bg: var(--ink); --b-fg: var(--paper); }
@@ -233,7 +233,7 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
   align-items: end;
 }
 .opener__text { grid-column: 1 / 8; display: grid; gap: clamp(28px, 3vw, 44px); padding-bottom: 8px; }
-.opener__text .lead { max-width: 30ch; }
+.opener__text .lead { max-width: 38ch; }
 .opener__pic { grid-column: 8 / 13; align-self: stretch; position: relative; overflow: clip; min-height: 420px; background: var(--bg-2); }
 .opener__pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .opener--nopic .opener__text { grid-column: 1 / 11; }
@@ -330,7 +330,7 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
 }
 .acc__panel.is-open { flex-grow: 7.5; }
 .acc__panel:nth-child(2) { --tone: #44503a; }
-.acc__panel:nth-child(3) { --tone: #5f6b55; }
+.acc__panel:nth-child(3) { --tone: #545f4a; }
 .acc__panel:nth-child(4) { --tone: #8a957f; --tone-fg: var(--ink); }
 .acc__panel:nth-child(5) { --tone: #aab3a0; --tone-fg: var(--ink); }
 .acc__panel:nth-child(6) { --tone: #ccd3c4; --tone-fg: var(--ink); }
@@ -381,7 +381,7 @@ a.mitem:hover h3 { text-decoration: underline; text-decoration-thickness: 2px; t
 .band__a ul { display: grid; gap: 6px; }
 
 /* ---------- contact strip ---------- */
-.strip { min-height: 80svh; padding: 48px 0 clamp(48px, 6vw, 80px); display: grid; align-content: start; overflow: clip; }
+.strip { min-height: 80svh; padding: 48px 0 clamp(64px, 6vw, 96px); display: grid; grid-template-columns: minmax(0, 1fr); align-content: start; overflow: clip; }
 .strip__photos { overflow: clip; }
 .strip__track { display: flex; gap: 8px; width: max-content; }
 .strip__track img { height: 150px; width: auto; object-fit: cover; }
@@ -390,8 +390,8 @@ a.mitem:hover h3 { text-decoration: underline; text-decoration-thickness: 2px; t
 .strip__track img:nth-child(3n) { aspect-ratio: 3 / 2; }
 .strip__body { padding: 72px var(--m) 0; display: grid; gap: 40px; }
 .strip__top { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); align-items: end; }
-.strip__top h2 { grid-column: 1 / 8; }
-.strip__top p { grid-column: 8 / 13; }
+.strip__top h2 { grid-column: 1 / 7; }
+.strip__top p { grid-column: 7 / 13; max-width: 36ch; }
 .bar { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
 .bar input, .bar button {
   width: 100%; height: 96px; border: 0; border-radius: 0;
@@ -420,7 +420,7 @@ a.mitem:hover h3 { text-decoration: underline; text-decoration-thickness: 2px; t
 .ftile h2 { font-size: var(--step-small); font-weight: 500; color: var(--fg-2); margin-bottom: 12px; }
 .ftile a:not(.big):hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .ftile--about { grid-column: 1 / 5; }
-.ftile--about > p:first-child { font-size: var(--step-lead); line-height: 1.25; letter-spacing: -0.01em; }
+.ftile--about > p:first-child { font-weight: 500; max-width: 34ch; }
 .ftile--nav { grid-column: 5 / 8; justify-content: flex-start; }
 .ftile--nav ul { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; }
 .ftile--city { grid-column: 8 / 10; }
@@ -495,7 +495,7 @@ a.mitem:hover h3 { text-decoration: underline; text-decoration-thickness: 2px; t
 .board__tile h3 { font-size: var(--step-lead); font-weight: 900; letter-spacing: -0.02em; line-height: 1.1; }
 .board__tile p { max-width: 40ch; }
 .board__tile--head { justify-content: flex-end; gap: 28px; }
-.board__tile--head .lead { max-width: 28ch; }
+.board__tile--head .lead { max-width: 34ch; }
 .board__tile--pic { padding: 0; }
 .board__tile--pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 
@@ -724,9 +724,9 @@ a.way:hover { background: var(--paper); }
 
   .foot { grid-template-columns: 1fr 1fr; grid-template-rows: none; gap: 6px; padding: 6px; }
   .ftile { min-height: 0; padding: 20px; justify-content: flex-start; }
-  .ftile--word { grid-column: 1 / 3; order: -2; min-height: 160px; justify-content: flex-end; }
+  .ftile--word { grid-column: 1 / 3; order: -1; min-height: 160px; justify-content: flex-end; }
   .ftile--word p { font-size: 10vw; }
-  .ftile--go { grid-column: 1 / 3; order: -1; min-height: 160px; justify-content: space-between; }
+  .ftile--go { grid-column: 1 / 3; order: -2; min-height: 160px; justify-content: space-between; }
   .ftile--go svg { width: 48px; height: 48px; }
   .ftile--nav { grid-column: 1; }
   .ftile--nav ul { grid-template-columns: 1fr; }
@@ -736,7 +736,7 @@ a.way:hover { background: var(--paper); }
   .ftile--about { grid-column: 2; }
   .ftile--about > p:first-child { font-size: 1.0625rem; }
 
-  .irow { grid-template-columns: 64px minmax(0, 1fr) auto; column-gap: 16px; padding: 12px 10px; }
+  .irow { grid-template-columns: 64px minmax(0, 1fr) auto; column-gap: 16px; row-gap: 4px; padding: 18px 10px; }
   .irow__thumb { display: block; grid-column: 1; grid-row: 1 / 3; width: 64px; height: 80px; object-fit: cover; }
   .irow__name { grid-column: 2; font-size: 1.75rem; }
   .irow__auth { grid-column: 2; grid-row: 2; font-size: var(--step-small); }
@@ -748,7 +748,10 @@ a.way:hover { background: var(--paper); }
   .sheets__pic { height: 70svh; }
 
   .board { grid-template-columns: minmax(0, 1fr); grid-auto-rows: auto; gap: 6px; padding: 6px; }
-  .board > * { grid-column: 1 !important; grid-row: auto !important; min-height: 220px; }
+  .board > * { grid-column: 1 !important; grid-row: auto !important; min-height: 200px; }
+  .board__tile:not(.board__tile--head):not(.board__tile--pic) { flex-direction: row; align-items: flex-end; gap: 24px; }
+  .board__tile:not(.board__tile--head):not(.board__tile--pic) > div { flex: 0 1 62%; }
+  .board__tile:not(.board__tile--head):not(.board__tile--pic) > .tile__big { flex: none; align-self: flex-start; }
   .board__tile--head { min-height: 52svh; }
   .board__tile--pic { aspect-ratio: 4 / 3; }
 
